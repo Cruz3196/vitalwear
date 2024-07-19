@@ -13,9 +13,11 @@ import "react-rater/lib/react-rater.css";
 
 // Styled components for the layout
 const ProductContainer = styled.div`
-  padding-top: 70px; 
-  padding-right: 70px; 
-  padding-left: 70px; 
+  padding-top: 70px;
+  padding-right: 10px;
+  padding-left: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const ProductWrapper = styled.div`
@@ -38,9 +40,8 @@ const ImageContainer = styled.div`
 
 const ProductImage = styled.img`
   width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 600px; /* Restrict maximum width */
   border-radius: 1rem;
 `;
 
@@ -58,7 +59,7 @@ const ProductInfoWrapper = styled.div`
 `;
 
 const ProductTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 1.5rem; /* Adjust for mobile */
   font-weight: bold;
   color: #000000; /* Example color */
 `;
@@ -73,19 +74,20 @@ const ProductDescription = styled.p`
 `;
 
 const ProductPrice = styled.h6`
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Adjust for mobile */
   font-weight: bold;
 `;
 
 const AddToCartButton = styled.button`
-  width: 175px;
+  width: 100%; /* Full width on mobile */
+  max-width: 175px;
   height: 50px;
   background-color: #FFFFFF; /* White background */
   color: #000000; /* Black text */
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  border: 1px solid #000000; 
+  border: 1px solid #000000;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -102,14 +104,15 @@ const AddToCartButton = styled.button`
 `;
 
 const WishlistButton = styled.button`
-  width: 175px;
+  width: 100%; /* Full width on mobile */
+  max-width: 175px;
   height: 50px;
   background-color: #FFFFFF; /* White background */
   color: #000000; /* Black text */
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  border: 1px solid #000000; 
+  border: 1px solid #000000;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -148,8 +151,9 @@ const PlusMinusButton = styled.div`
 
 const ButtonsContainer = styled.div`
   display: flex;
+  flex-direction: column; /* Stack buttons vertically on small screens */
   gap: 1rem;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center; /* Center align items */
 `;
 
 const ProductPage = () => {
@@ -199,18 +203,16 @@ const ProductPage = () => {
 
           {/* Product Info */}
           <ProductInfoWrapper>
-            <div>
-              <ProductTitle>{product.title}</ProductTitle>
-            </div>
+            <ProductTitle>{product.title}</ProductTitle>
             <ProductDescription>{product.description}</ProductDescription>
-            <div className="flex items-center">
+            <div style={{ display: 'flex', alignItems: 'center' }}>
               <Rater
                 style={{ fontSize: "20px" }}
                 total={5}
                 interactive={false}
                 rating={product.rating}
               />
-              <p className="ml-3 text-sm text-gray-400">
+              <p style={{ marginLeft: '10px', fontSize: '14px', color: '#9CA3AF' }}>
                 ({product.reviews})
               </p>
             </div>
@@ -218,7 +220,7 @@ const ProductPage = () => {
             <ButtonsContainer>
               <PlusMinusButton>
                 <QuantityButton onClick={decreaseQuantity}>−</QuantityButton>
-                <div className="flex h-8 w-8 items-center justify-center border-t border-b">
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '2rem', width: '2rem', border: '1px solid #E5E7EB' }}>
                   {quantity}
                 </div>
                 <QuantityButton onClick={increaseQuantity}>+</QuantityButton>
