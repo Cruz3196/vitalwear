@@ -1,0 +1,36 @@
+@media (max-width: 1198px) {
+  .order-summary-container,
+  .billing-form-container {
+    flex: 0 0 100%; /* Full width on smaller screens */
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (min-width: 1198px) {
+  .order-summary-container {
+    flex: 0 0 100%; /* Example width adjustment */
+    max-width: 100%; /* Example max-width adjustment */
+  }
+
+  .billing-form-container {
+    flex: 0 0 60%; 
+    max-width: 60%; 
+  }
+}
+
+@media (max-width: 992px) {
+  .order-summary-container,
+  .billing-form-container {
+    height: auto; /* Allow containers to grow with content on smaller screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .order-summary-container {
+    height: 250px; /* Adjust height for larger screens */
+  }
+
+  .billing-form-container {
+    height: auto; /* Let the form container adapt to content on larger screens */
+  }
+}

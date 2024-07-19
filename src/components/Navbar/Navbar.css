@@ -1,0 +1,159 @@
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 85px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 16px rgba(0,0,0,.15);
+}
+
+nav .userIcon,
+nav .cartIcon {
+  font-size: 23px;
+}
+
+.scrolled {
+  background-color: white;
+}
+
+nav ul {
+  display: flex;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 70px;
+}
+
+nav ul li {
+  margin-top: 0px;
+  padding: 0 15px;
+}
+
+nav ul li a {
+  padding: 0.5rem;
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+nav .title {
+  margin-right: auto;
+  margin-left: 70px;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+nav .title span {
+  color: tomato;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  cursor: pointer;
+  font-size: 2.0rem;
+  color: black;
+  display: none;
+  transition: transform 0.5s ease;
+}
+
+
+
+.menu-icon.open {
+  transform: rotate(180deg);
+  margin-top: 0.7rem;
+}
+
+.mobile-icons {
+  display: none;
+}
+
+.user-icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  margin-top: 6px;
+}
+
+.userIcon{
+  margin-top: 0.1rem;
+  margin-right: -15px;
+}
+
+@media (max-width: 1000px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 90px;
+    padding: 1rem;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul.open {
+    display: flex;
+    text-align: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    margin: 0.2rem 0.5rem;
+  }
+
+  nav .title {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .mobile-icons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2.1rem;
+    right: 6.7rem;
+  }
+
+  .user-icon{
+    margin-bottom: 7px;
+    margin-right: 10px;
+  }
+
+  .user-Icon{
+    font-size: 23px;
+  }
+
+  .mobile-icons a {
+    margin-left: 1rem;
+    color: black;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}

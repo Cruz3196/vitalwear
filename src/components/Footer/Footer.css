@@ -1,0 +1,83 @@
+.footer1 .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    padding: 50px 0;
+  }
+  
+  .footer1 .footer li {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .footer1 .footer li h2 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  .footer1 .footer li .phone {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer1 .footer li form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer1 .footer li form input {
+    background: #f7f7f7;
+    border-radius: 4px;
+    padding: 17px 16px;
+    border: none;
+    color: #2d2e2e;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .footer1 .footer li form textarea {
+    background: #f7f7f7;
+    border-radius: 4px;
+    padding: 17px 16px;
+    border: none;
+    color: #2d2e2e;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .footer1 .footer li form button {
+    padding: 17px 30px;
+    background: #ffffff;
+    border: 1px solid #3a4f39;
+    border-radius: 4px;
+    width: 40%;
+    align-self: flex-end;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .container {
+      width: 550px;
+    }
+  
+    .footer1 .footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      gap: 30px;
+    }
+  
+    .footer1 .footer li {
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .footer1 .footer li form button {
+      width: 100%;
+    }
+  }
+  

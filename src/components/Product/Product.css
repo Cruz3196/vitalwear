@@ -1,0 +1,331 @@
+/* Products.css */
+
+/* General styling for the container */
+
+.container {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.justify-content-center{
+  margin-top: 50px;
+  display: flex;
+}
+
+/* SHOP DETAILs */
+
+.shopDetails__left {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.shopDetails__right {
+  flex: 1;
+}
+
+/* Styling for the heading */
+h2.display-5 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Styling for the filter buttons */
+.buttons .btn {
+  margin: 5px;
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+/* Product card styling */
+.card {
+  flex: 0 1 calc(33.333%  20px);  /* 3 cards per row*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* .card:hover {
+  transform: translateY(-10px);
+} */
+
+.card-img-top {
+  object-fit: contain;
+  max-height: 300px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.list-group-item.lead {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-body .btn {
+  margin: 5px;
+}
+
+/* Skeleton loader styling */
+.skeleton-container {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.skeleton-item {
+  margin: 10px auto;
+  width: 90%;
+  max-width: 560px;
+  height: 40px;
+}
+
+.skeleton-card {
+  margin: 20px auto;
+  width: 100%;
+  height: 592px;
+}
+
+/* SHOP DETAILS SECTION */
+.shopDetailsSorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopDetailsBreadcrumbLink a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.shopDetailsBreadcrumbLink a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid black;
+  transition: width 0.3s ease;
+}
+
+.shopDetailsBreadcrumbLink a:hover::after {
+  width: 100%;
+}
+
+.shopDetailsSort select {
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+}
+
+.shopDetailsSort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterSeprator {
+  width: 2px;
+  height: 22px;
+  background-color: #e4e4e4;
+}
+
+.filterLeft,
+.filterRight,
+.shopDetails__left {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .filterLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .shopDetailsBreadcrumbLink {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1043px) {
+  .filterRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1044px) {
+  .shopDetails__left {
+    display: block;
+  }
+}
+
+.filterLeft p,
+.filterRight p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0; /* removes margin to ensure vertical alignment */
+  line-height: 1; /* adjust line-height to ensure text aligns with icon*/
+}
+
+/* DRAWER */
+
+.filterDrawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.filterDrawer.open {
+  right: 0;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf9f8;
+  padding: 28px 20px;
+}
+
+.drawerHeader p {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.drawerContent {
+  padding: 20px;
+  height: calc(100% - 130px);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .card{
+    flex:0 1 calc(50%-20px); /* 2 cards per row tablets*/
+  }
+  .card-img-top {
+    max-height: 200px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .list-group-item.lead {
+    font-size: 1.2rem;
+  }
+
+  .card-body .btn {
+    margin: 3px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card{
+    flex: 0 1 calc(100% - 20px); /* 1 card per row on call devices  */
+  }
+}
+
+/* styling for the add to cart icon */
+.image-container{
+  position: relative;
+}
+
+.add-to-cart-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 10px;
+  border: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.image-container:hover .add-to-cart-icon{
+  display: block;
+}
+
+/* Products.css */
+
+/* General button styles */
+.btn {
+  /* Your general button styles here */
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark theme button styles */
+.btn-dark {
+  background-color: #343a40;
+  color: #ffffff;
+  border: none;
+}
+
+/* Hover effect for dark theme button */
+.btn-dark:hover {
+  background-color: #212529; /* Darken the background on hover */
+}
+
+/* Additional styles for 'Buy Now' button */
+.btn-buy-now {
+  /* Add specific styles for 'Buy Now' button */
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Hover effect for 'Buy Now' button */
+.btn-buy-now:hover {
+  background-color: #495057; /* Darken the background on hover */
+}
