@@ -42,7 +42,7 @@ h2.display-5 {
 }
 /* Product card styling */
 .card {
-  flex: 0 1 calc(33.333%  20px);  /* 3 cards per row*/
+  flex: 0 1 calc(33.333% - 20px);  /* 3 cards per row*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
