@@ -45,14 +45,14 @@ const Hero = () => {
 
   return (
     <div 
-    className={`hero-section ${HeroData[current].customClass || ''}`} 
-    style={{ backgroundImage: `url(${HeroData[current].image})` }}
+      className={`hero-section ${HeroData[current].customClass || ''}`} 
+      style={{ backgroundImage: `url(${HeroData[current].image})` }}
     >
       <div className="hero-wrapper">
         <div className="hero-slider">
-        <div className="hero-content">
-          <h1>{HeroData[current].title}</h1>
-          <h2>{HeroData[current].h2}</h2>
+          <div className="hero-content">
+            <h1>{HeroData[current].title}</h1>
+            <h2>{HeroData[current].h2}</h2>
             <div className="button-container">
               {HeroData[current].buttons.map((button, index) => (
                 <a key={index} href={button.link} className="hero-button">
