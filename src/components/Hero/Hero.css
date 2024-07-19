@@ -192,7 +192,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero-content {
+  .hero-content h1 h2 {
     margin-left: 10px; /* Adjust for smaller screens */
   }
 }
