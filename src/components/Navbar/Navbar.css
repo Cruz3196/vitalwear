@@ -136,12 +136,12 @@ nav .title span {
     align-items: center;
     position: absolute;
     top: 2.1rem;
-    right: 6.7rem;
+    right: 6.5rem;
   }
 
   .user-icon{
     margin-bottom: 7px;
-    margin-right: 10px;
+    margin-right: 4px;
   }
 
   .user-Icon{
@@ -149,7 +149,7 @@ nav .title span {
   }
 
   .mobile-icons a {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     color: black;
   }
 
