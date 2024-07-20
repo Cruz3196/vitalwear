@@ -1,3 +1,4 @@
+/* General nav styles */
 nav {
   position: sticky;
   top: 0;
@@ -11,15 +12,18 @@ nav {
   box-shadow: 0 0 16px rgba(0,0,0,.15);
 }
 
+/* Icon styles */
 nav .userIcon,
 nav .cartIcon {
   font-size: 23px;
 }
 
+/* Scrolled nav style */
 .scrolled {
   background-color: white;
 }
 
+/* Nav menu styles */
 nav ul {
   display: flex;
   background-color: white;
@@ -68,8 +72,6 @@ nav .title span {
   transition: transform 0.5s ease;
 }
 
-
-
 .menu-icon.open {
   transform: rotate(180deg);
   margin-top: 0.7rem;
@@ -79,19 +81,19 @@ nav .title span {
   display: none;
 }
 
-.user-icon-container{
+.user-icon-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding-left: 25px;
   margin-top: 6px;
 }
 
-.userIcon{
+.userIcon {
   margin-top: 0.1rem;
-  margin-right: -15px;
+  margin-right: 10px; /* Adjust margin to be consistent with cart icon */
 }
 
+/* Responsive styles */
 @media (max-width: 1000px) {
   .menu-icon {
     display: block;
@@ -136,20 +138,21 @@ nav .title span {
     align-items: center;
     position: absolute;
     top: 2.1rem;
-    right: 6.7rem;
+    right: 1rem; /* Adjust to move closer to the right edge */
+    gap: 10px; /* Adjust spacing between icons */
   }
 
-  .user-icon{
-    margin-bottom: 7px;
-    margin-right: 10px;
+  .user-icon-container {
+    display: flex;
+    align-items: center;
   }
 
-  .user-Icon{
-    font-size: 23px;
+  .userIcon,
+  .cartIcon {
+    margin: 0; /* Remove extra margins to ensure icons are aligned */
   }
 
   .mobile-icons a {
-    margin-left: 1rem;
     color: black;
   }
 
