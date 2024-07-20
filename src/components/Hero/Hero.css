@@ -17,13 +17,14 @@
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
+  font-size: 3rem; /* Default size */
 }
 
 .hero-full-charge .hero-content h2 {
   color: #000000; /* Subtitle color */
   letter-spacing: 1px;
   word-spacing: 4px;
-  font-size: 17px;
+  font-size: 1.5rem; /* Default size */
   margin-top: 20px;
 }
 
@@ -33,11 +34,12 @@
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
+  font-size: 3rem; /* Default size */
 }
 
 .hero-section.hero-new-section .hero-content h2 {
   color: #fff; /* Subtitle color */
-  font-size: 18px;
+  font-size: 1.5rem; /* Default size */
 }
 
 /* Wrapper for hero content */
@@ -191,8 +193,30 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-full-charge .hero-content h1,
+  .hero-section.hero-new-section .hero-content h1 {
+    font-size: 2.5rem; /* Adjust size */
+  }
+  
+  .hero-full-charge .hero-content h2,
+  .hero-section.hero-new-section .hero-content h2 {
+    font-size: 1.2rem; /* Adjust size */
+  }
+}
+
 @media (max-width: 768px) {
-  .hero-content h1 h2 {
-    margin-left: 10px; /* Adjust for smaller screens */
+  .hero-full-charge .hero-content h1,
+  .hero-section.hero-new-section .hero-content h1 {
+    font-size: 2rem; /* Adjust size */
+  }
+  
+  .hero-full-charge .hero-content h2,
+  .hero-section.hero-new-section .hero-content h2 {
+    font-size: 1rem; /* Adjust size */
+  }
+
+  .hero-content {
+    margin-left: 10px; /* Adjust left margin for smaller screens */
   }
 }
