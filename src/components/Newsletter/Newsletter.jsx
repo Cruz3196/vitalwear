@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+// import AOS from "aos"
+// import "aos/dist/aos.css";
 
 const NewsletterContainer = styled.div`
   font-family: "Jost", sans-serif;
@@ -86,32 +88,13 @@ const NewsletterButton = styled.button`
   }
 `;
 
-const ImageContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping to new lines */
-  overflow-x: auto; /* Allow horizontal scrolling on small screens */
-  margin-top: 20px;
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-`;
-
-const StyledImage = styled.img`
-  width: 200px; /* Adjust width as needed */
-  height: auto;
-  margin-right: 10px; /* Space between images */
-  border-radius: 10px;
-
-  @media (max-width: 768px) {
-    width: 150px; /* Adjust width for smaller screens */
-    margin-right: 5px; /* Adjust spacing for smaller screens */
-  }
-`;
-
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [visible, setVisible] = useState(false);
+
+  // useEffect(() => {
+  //   AOS.init({duration:1000});
+  // }, []); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -144,11 +127,6 @@ const Newsletter = () => {
         <NewsletterButton>Subscribe</NewsletterButton>
       </NewsletterForm>
       {visible && <div>You have successfully subscribed!</div>}
-      <ImageContainer>
-        <StyledImage src="image1.jpg" alt="Image 1" />
-        <StyledImage src="image2.jpg" alt="Image 2" />
-        <StyledImage src="image3.jpg" alt="Image 3" />
-      </ImageContainer>
     </NewsletterContainer>
   );
 };
