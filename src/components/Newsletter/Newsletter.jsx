@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import AOS from "aos"
-// import "aos/dist/aos.css";
 
 const NewsletterContainer = styled.div`
   font-family: "Jost", sans-serif;
@@ -10,91 +8,94 @@ const NewsletterContainer = styled.div`
   align-items: center;
   background-color: #000000;
   padding: 60px;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
-    padding: 40px 30px 40px 30px;
+    padding: 40px 20px;
   }
 `;
 
 const NewsletterTitle = styled.h1`
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
   text-align: center;
+
   @media (max-width: 768px) {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 `;
 
 const NewsletterSubtitle = styled.span`
-  font-size: 25px;
+  font-size: 1.5em;
   color: #fffcf8;
+  text-align: center;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 0px;
+    font-size: 1em;
+    margin-bottom: 10px;
   }
 `;
 
 const NewsletterForm = styled.form`
   display: flex;
   margin-top: 20px;
-  width: 474px;
+  width: 100%;
+  max-width: 500px;
   height: 67px;
   background: #ffffff;
   border-radius: 10px;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
 
   @media (max-width: 768px) {
-    height: 40px;
-    width: 95%;
+    height: 50px;
+    padding: 0 5px;
   }
 `;
 
 const NewsletterInput = styled.input`
   padding: 10px;
-  width: 350px;
+  width: 70%;
   border: none;
-  padding-left: 30px;
-  font-size: 18px;
+  padding-left: 20px;
+  font-size: 1em;
   outline: none;
+  flex-grow: 1;
 
   @media (max-width: 768px) {
-    width: 70%;
-    font-size: 12px;
-    margin-left: 5px;
+    padding: 5px;
+    font-size: 0.9em;
   }
 `;
 
 const NewsletterButton = styled.button`
-  width: 110px;
+  width: 30%;
   height: 90%;
-  font-size: 18px;
+  font-size: 1em;
   background: #000000;
   border-radius: 8px;
   padding: 10px;
   color: #fff;
   cursor: pointer;
-  margin-right: 5px;
+  margin-left: 5px;
   text-align: center;
+  border: none;
 
   @media (max-width: 768px) {
-    width: 25%;
-    font-size: 12px;
-    margin-right: 2px;
+    font-size: 0.8em;
+    padding: 5px;
+    margin-left: 2px;
   }
 `;
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [visible, setVisible] = useState(false);
-
-  // useEffect(() => {
-  //   AOS.init({duration:1000});
-  // }, []); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
