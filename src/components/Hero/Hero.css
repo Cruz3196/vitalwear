@@ -51,6 +51,7 @@
   align-items: center;
   position: relative; 
   padding: 0 20px; /* Add padding if needed */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 /* Hero slide styling */
@@ -97,9 +98,9 @@
   display: flex;
   flex-direction: column;
   max-width: 1600px;
-  width: calc(100% - 100px);
+  width: 100%;
   color: #fff;
-  margin-left: 100px; /* Adjust left margin */
+  margin-left: 0; /* Align to the left */
 }
 
 /* Arrow button styling */
@@ -216,7 +217,7 @@
     font-size: 1rem; /* Adjust size */
   }
 
-  .hero-content {
-    margin-left: 10px; /* Adjust left margin for smaller screens */
+  .hero-wrapper {
+    padding: 0 10px; /* Adjust padding for smaller screens */
   }
 }
