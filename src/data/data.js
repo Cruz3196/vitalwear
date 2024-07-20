@@ -168,7 +168,7 @@ const HeroData = [
         id: 1, 
         title: "FULL CHARGE",
         image: "https://www.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fwl6q2in9o7k3%2F2H5ERqks2j6eF9rtn4SZZN%2F2b5d9ade931d28987127d45b5c755c49%2Fdesktop-banner.jpg&w=3840&q=85",
-        h2: "Energy + powers you through your thoughest Sets",
+        h2: "SPORTSWEAR ESSENTIAL",
         buttons: [
             { text: "CHARGE UP", link: '/Products'},
         ],
@@ -178,7 +178,7 @@ const HeroData = [
         id: 2, 
         title: "NEW STUFF JUST DROPPED",
         image: "https://images.ctfassets.net/wl6q2in9o7k3/43afnXy5BKoGWPFCc78mUE/c82e722eb97907da6e6fbe789ea755f4/A_Collection_Banner_3840x1096.jpg",
-        h2: "Discover your potential",
+        h2: "DISCOVER YOUR POTENTIAL",
         buttons: [
             { text: "SHOP MEN", link: '/Products' },
             { text: "SHOP WOMEN", link: '/Products' }
