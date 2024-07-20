@@ -17,14 +17,13 @@
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
-  font-size: 3rem; /* Default size */
 }
 
 .hero-full-charge .hero-content h2 {
   color: #000000; /* Subtitle color */
   letter-spacing: 1px;
   word-spacing: 4px;
-  font-size: 1.5rem; /* Default size */
+  font-size: 17px;
   margin-top: 20px;
 }
 
@@ -34,12 +33,11 @@
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
-  font-size: 3rem; /* Default size */
 }
 
 .hero-section.hero-new-section .hero-content h2 {
   color: #fff; /* Subtitle color */
-  font-size: 1.5rem; /* Default size */
+  font-size: 18px;
 }
 
 /* Wrapper for hero content */
@@ -51,7 +49,6 @@
   align-items: center;
   position: relative; 
   padding: 0 20px; /* Add padding if needed */
-  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 /* Hero slide styling */
@@ -98,9 +95,9 @@
   display: flex;
   flex-direction: column;
   max-width: 1600px;
-  width: 100%;
+  width: calc(100% - 100px);
   color: #fff;
-  margin-left: 0; /* Align to the left */
+  margin-left: 100px; /* Adjust left margin */
 }
 
 /* Arrow button styling */
@@ -194,30 +191,8 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-  .hero-full-charge .hero-content h1,
-  .hero-section.hero-new-section .hero-content h1 {
-    font-size: 2.5rem; /* Adjust size */
-  }
-  
-  .hero-full-charge .hero-content h2,
-  .hero-section.hero-new-section .hero-content h2 {
-    font-size: 1.2rem; /* Adjust size */
-  }
-}
-
 @media (max-width: 768px) {
-  .hero-full-charge .hero-content h1,
-  .hero-section.hero-new-section .hero-content h1 {
-    font-size: 2rem; /* Adjust size */
-  }
-  
-  .hero-full-charge .hero-content h2,
-  .hero-section.hero-new-section .hero-content h2 {
-    font-size: 1rem; /* Adjust size */
-  }
-
-  .hero-wrapper {
-    padding: 0 10px; /* Adjust padding for smaller screens */
+  .hero-content {
+    left: -55px; /* Adjust for smaller screens */
   }
 }
